@@ -321,6 +321,25 @@ section {
   line-height: 2rem;
 }
 
+.header-content .right-header .current .label {
+  display: block;
+  font-style: italic;
+  text-transform: uppercase;
+  color: grey;
+  font-weight: 300;
+  font-size: .8rem;
+  letter-spacing: 1px;
+}
+
+.header-content .right-header .current .role {
+  font-weight: 400;
+  padding: 0.6rem 1rem;
+  border-radius: 19px;
+  color: #c1282f;
+  -webkit-box-shadow: 0 7px 29px -13px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 29px -13px rgba(0, 0, 0, 0.2);
+}
+
 .about-container {
   display: -ms-grid;
   display: grid;

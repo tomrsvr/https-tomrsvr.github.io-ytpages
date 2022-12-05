@@ -243,8 +243,26 @@ header {
       margin: 1.5rem 0;
       line-height: 2rem;
     }
-  } 
-}
+    .current {
+      .label {
+        display: block;
+        font-style: italic;
+        text-transform: uppercase;
+        color: grey;
+        font-weight: 300;
+        font-size: .8rem;
+        letter-spacing: 1px;
+      }
+      .role { 
+        font-weight: 400;
+        padding: 0.6rem 1rem;
+        border-radius: 19px;
+        color: #c1282f;
+        box-shadow: 0 7px 29px -13px rgba(0,0,0,.2);
+      }
+    }
+  }
+  }
 
 //About
 .about-container {
