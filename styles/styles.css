@@ -285,6 +285,7 @@ section {
      object-fit: cover;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  border-radius: 4%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
@@ -310,6 +311,7 @@ section {
 
 .header-content .right-header .name {
   font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .header-content .right-header .name span {
@@ -338,6 +340,27 @@ section {
   color: #c1282f;
   -webkit-box-shadow: 0 7px 29px -13px rgba(0, 0, 0, 0.2);
           box-shadow: 0 7px 29px -13px rgba(0, 0, 0, 0.2);
+}
+
+.header-content .right-header .media {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2rem;
+}
+
+.header-content .right-header .media img {
+  max-width: 100%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: .8;
+}
+
+.header-content .right-header .media img:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .about-container {
@@ -1195,6 +1218,10 @@ section {
   .about-stats .progress-bars {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .header-content .right-header .media {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 /*# sourceMappingURL=styles.css.map */

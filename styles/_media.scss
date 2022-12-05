@@ -182,4 +182,9 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .header-content .right-header .media {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }

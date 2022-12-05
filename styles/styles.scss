@@ -219,6 +219,7 @@ header {
         height: 100%;
         object-fit: cover;
         transition: all .4s ease-in-out;
+        border-radius: 4%;
         filter: grayscale(100%);
         &:hover {
           filter: grayscale(0);
@@ -235,6 +236,7 @@ header {
     padding-right: 18rem;
     .name {
       font-size: 3rem;
+      margin-bottom: 1rem;
       span {
         color: var(--color-secondary);
       }
@@ -260,8 +262,24 @@ header {
         color: #c1282f;
         box-shadow: 0 7px 29px -13px rgba(0,0,0,.2);
       }
+    } 
+
+    .media {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 2rem;
+      img {
+        max-width: 100%;
+        filter: grayscale(1);
+        opacity: .8;
+        // transition: all 0 ease-in-out;
+        &:hover{
+          opacity: 1;
+          filter: grayscale(0);
+        }
+      }
+      }
     }
-  }
   }
 
 //About
