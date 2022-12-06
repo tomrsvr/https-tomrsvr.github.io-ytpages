@@ -355,6 +355,7 @@ section {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   opacity: .8;
+  width: 55px;
 }
 
 .header-content .right-header .media img:hover {

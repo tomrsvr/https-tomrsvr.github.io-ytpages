@@ -273,6 +273,7 @@ header {
         filter: grayscale(1);
         opacity: .8;
         // transition: all 0 ease-in-out;
+        width: 55px;
         &:hover{
           opacity: 1;
           filter: grayscale(0);
