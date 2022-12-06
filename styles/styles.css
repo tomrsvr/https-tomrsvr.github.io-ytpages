@@ -1022,16 +1022,21 @@ section {
 
 .main-title h2 .bg-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--color-grey1);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #f6f5f4;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   z-index: -1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
+  -webkit-text-stroke: 2px #ded5cd;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media screen and (max-width: 600px) {

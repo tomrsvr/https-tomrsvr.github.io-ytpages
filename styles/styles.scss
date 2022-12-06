@@ -757,14 +757,22 @@ header {
     }
     .bg-text {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      color: var(--color-grey1);
+      // top: 50%;
+      // left: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+
+      // color: var(--color-grey1);
+      color: #f6f5f4;
       transition: all .4s ease-in-out;
       z-index: -1;
-      transform: translate(-50%,-50%);
+      // transform: translate(-50%,-50%);
       font-weight: 800;
       font-size: 6.3rem;
+      -webkit-text-stroke: 2px #ded5cd;
+      user-select: none;
     }
   }
 }
