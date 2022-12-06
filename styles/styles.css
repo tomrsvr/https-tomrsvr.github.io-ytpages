@@ -19,7 +19,7 @@
   --color-black-tutorial: #000;
   --color-black: rgba(0,0,0,.84);
   --color-grey0: #f8f8f8;
-  --color-grey1: #dbe1e8;
+  --color-grey1: #454e56;
   --color-grey2: #b2becd;
   --color-grey3: #6c7983;
   --color-grey4: #454e56;
@@ -27,6 +27,7 @@
   --color-grey6: #12181b;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --box-shadow-soft: 0 7px 29px -13px rgb(0 0 0 / 20%);
 }
 
 .light-mode {
@@ -318,6 +319,16 @@ section {
   color: var(--color-secondary);
 }
 
+.header-content .right-header img.avatar {
+  max-width: 120px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-bottom: 1rem;
+  display: none;
+  -webkit-box-shadow: var(--box-shadow-soft);
+          box-shadow: var(--box-shadow-soft);
+}
+
 .header-content .right-header p {
   margin: 1.5rem 0;
   line-height: 2rem;
@@ -540,8 +551,8 @@ section {
 .timeline {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
   padding-bottom: 3rem;
 }
@@ -549,7 +560,6 @@ section {
 .timeline .timeline-item {
   position: relative;
   padding-left: 3rem;
-  border-left: 1px solid var(--color-grey5);
 }
 
 .timeline .timeline-item .tl-icon {
@@ -571,6 +581,15 @@ section {
           justify-content: center;
 }
 
+.timeline .timeline-item .tl-icon .connector {
+  height: 16rem;
+  width: 3px;
+  background: #575757;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
 .timeline .timeline-item .tl-duration {
   padding: .2rem .6rem;
   background-color: var(--color-grey5);
@@ -579,10 +598,11 @@ section {
   font-size: .8rem;
   text-transform: uppercase;
   font-weight: 500;
+  color: var(--color-grey2);
 }
 
 .timeline .timeline-item h5 {
-  padding: 1rem 0;
+  padding: .2rem 0;
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
@@ -594,8 +614,20 @@ section {
   font-size: 1.2rem;
 }
 
+.timeline .timeline-item h5 span.url {
+  font-weight: 200;
+  font-style: italic;
+  font-size: .9rem;
+}
+
+.timeline .timeline-item h5 span.role {
+  display: block;
+  color: var(--color-grey5);
+  font-size: 1rem;
+}
+
 .timeline .timeline-item p {
-  color: var(--color-grey2);
+  color: var(--color-grey5);
 }
 
 .port-text {
@@ -1195,6 +1227,7 @@ section {
   .header-content .left-header .image {
     margin: 0 auto;
     width: 90%;
+    display: none;
   }
   .controls {
     top: auto;
@@ -1218,6 +1251,9 @@ section {
 }
 
 @media screen and (max-width: 700px) {
+  img.avatar {
+    display: block !important;
+  }
   .section {
     padding: 7rem 3rem;
   }
