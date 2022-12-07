@@ -177,6 +177,9 @@
 @media screen and (max-width: 700px) {
     img.avatar {
         display: block !important;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        animation: gradientx 12s ease infinite;
+        background-size: 300% 100%;
     }
     
     .section {
@@ -190,6 +193,11 @@
 
     .header-content .right-header .media {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-me .typewriter {
+        display: block;
+        margin-top: .6rem;
     }
 
 }
