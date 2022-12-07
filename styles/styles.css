@@ -51,6 +51,16 @@
   --color-grey6: #12181b;
 }
 
+.light-mode .header-content .right-header .media .bright {
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+}
+
+.light-mode .header-content .right-header .media .bright.invert {
+  -webkit-filter: brightness(0) invert(100%);
+          filter: brightness(0) invert(100%);
+}
+
 body {
   background-color: var(--color-primary);
   font-family: 'Lato', sans-serif;
