@@ -24,9 +24,13 @@
     --color-grey4: #454e56;
     --color-grey5: #2a2e35;
     --color-grey6: #12181b;
+    --color-gunmetal: #53565A;
+    --color-gold: #af966b;
+    --color-ota: #a22222;
+    --color-fukushima: #048665;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
-    --box-shadow-soft: 0 7px 29px -13px rgb(0 0 0 / 20%);
+    --shadow-soft: 0 7px 29px -13px rgb(0 0 0 / 20%);
 }
   
 .light-mode {
@@ -213,8 +217,22 @@ header {
       height: 90%;
       width: 68%;
       margin-left: 4rem;
-      background-color: var(--color-black);
+      // background-color: var(--color-black);
       transition: all .4s ease-in-out;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      animation: gradientx 12s ease infinite;
+      background-size: 500% 200%; // important to follow gradient declaration
+      @keyframes gradientx {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
       img {
         width: 100%;
         height: 100%;
@@ -229,6 +247,9 @@ header {
       
     }
   }
+  
+  
+  
 
   .right-header {
     display: flex;
@@ -248,7 +269,7 @@ header {
       background-color: grey;
       margin-bottom: 1rem;
       display: none;
-      box-shadow: var(--box-shadow-soft);
+      box-shadow: var(--shadow-soft);
     }
     p {
       margin: 1.5rem 0;
@@ -455,7 +476,19 @@ header {
         top: 0;
         z-index: -1;
       }
-
+      &.ota {
+        background-color: var(--color-ota);
+        img {
+          width: 25px;
+        }
+      }
+      &.fukushima {
+        background-color: var(--color-fukushima);
+        img {
+          width: 25px;
+          filter: brightness(0) invert(1);
+        }
+      }
     }
     .tl-duration {
       padding: .2rem .6rem;
@@ -483,7 +516,7 @@ header {
         }
         &.role {
           display: block;
-          color: var(--color-grey5);
+          color: var(--color-gold);
           font-size: 1rem;
         }
       }
@@ -806,5 +839,33 @@ header {
     }
   }
 }
+
+
+
+
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+
+.contact-me {
+  margin-top: 2rem;
+}
+
+a.typewrite {
+  background: white;
+  padding: 0.6rem 0.6rem;
+  border-radius: 18px;
+}
+
+
+
 
 @import './media';
