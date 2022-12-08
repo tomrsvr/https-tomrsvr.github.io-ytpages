@@ -36,6 +36,7 @@
   --typewriter-bg: #fff;
   --role-border: transparent;
   --mail-line: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  --default-transition: all .4s ease-in-out;
 }
 
 .dark-mode {
@@ -401,6 +402,8 @@ section {
   -webkit-box-shadow: 0 7px 29px -13px rgba(0, 0, 0, 0.2);
           box-shadow: 0 7px 29px -13px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--role-border);
+  -webkit-transition: var(--default-transition);
+  transition: var(--default-transition);
 }
 
 .header-content .right-header .media {
