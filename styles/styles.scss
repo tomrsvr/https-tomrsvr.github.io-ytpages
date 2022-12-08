@@ -28,7 +28,10 @@
     --color-gold: #af966b;
     --color-ota: #a22222;
     --color-fukushima: #048665;
+    --color-tdt: #227BBC;
     --color-jt: #c1282f;
+    --color-fco: #003864;
+    --color-govuk: #000;
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
     --shadow-soft: 0 7px 29px -13px rgb(0 0 0 / 20%);
@@ -486,7 +489,7 @@ header {
       align-items: center;
       justify-content: center;
       .connector {
-        height: 16rem;
+        height: 10rem;
         width: 3px;
         background: #575757;
         position: absolute;
@@ -504,6 +507,27 @@ header {
         img {
           width: 25px;
           filter: brightness(0) invert(1);
+        }
+      }
+      &.tdt {
+        background-color: var(--color-tdt);
+      }
+      &.fco {
+        background-color: var(--color-fco);
+        img {
+          width: 70%;
+        }
+      }
+      &.govuk {
+        background-color: var(--color-govuk);
+        img {
+          width: 70%;
+        }
+      }
+      &.jt {
+        background-color: var(--color-white);
+        img {
+          width: 80%;
         }
       }
     }
