@@ -198,6 +198,9 @@
     .contact-me .typewriter {
         display: block;
         margin-top: .6rem;
+        .typewrite {
+            width: 100%;
+        }
     }
 
 }
