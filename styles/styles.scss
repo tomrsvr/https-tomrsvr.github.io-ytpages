@@ -31,9 +31,10 @@
     --br-sm-2: 14px;
     --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
     --shadow-soft: 0 7px 29px -13px rgb(0 0 0 / 20%);
+    --typewriter-bg: #fff;
 }
   
-.light-mode {
+.dark-mode {
   --color-primary-tutorial: #191d2b;
   --color-primary: #12181b;  
   --color-primary-tutorial: #f5f5f5; 
@@ -41,13 +42,14 @@
   --color-white: #000;
   --color-black-tutorial: #000;
   --color-black: #fff;
-  --color-grey0: #f8f8f8;
+  --color-grey0: #313131;
   --color-grey1: #dbe1e8;
   --color-grey2: #b2becd;
   --color-grey3: #6c7983;
   --color-grey4: #454e56;
   --color-grey5: #dbe1e8;
-  --color-grey6: #12181b;
+  --color-grey6: #b1b1b1;
+  --typewriter-bg: #2b2b2b;
   .header-content .right-header .media .bright {
     filter: brightness(100);
   }
@@ -286,14 +288,14 @@ header {
         display: block;
         font-style: italic;
         text-transform: uppercase;
-        color: grey;
+        color: var(--color-grey4);
         font-weight: 300;
         font-size: .8rem;
         letter-spacing: 1px;
       }
       .role { 
         font-weight: 400;
-        padding: 0.6rem 1rem;
+        padding: 0.6rem .8rem;
         border-radius: 19px;
         color: #c1282f;
         box-shadow: 0 7px 29px -13px rgba(0,0,0,.2);
@@ -863,14 +865,16 @@ header {
 
 .contact-me {
   margin-top: 2rem;
+  a.typewrite {
+    background:var(--typewriter-bg);
+    padding: 0.6rem 0.6rem;
+    border-radius: 18px;
+    color: var(--color-grey6);
+    width: 100%;
+    min-width: 20rem;
+    font-weight: 400;
+  }
 }
-
-a.typewrite {
-  background: white;
-  padding: 0.6rem 0.6rem;
-  border-radius: 18px;
-}
-
 
 
 
