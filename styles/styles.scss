@@ -280,6 +280,11 @@ header {
     flex-direction: column;
     justify-content: center;
     padding-right: 18rem;
+
+    .scroll {
+      display: none;
+    }
+
     .name {
       font-size: 3rem;
       margin-bottom: 1rem;
@@ -294,6 +299,7 @@ header {
       margin-bottom: 1rem;
       display: none;
       box-shadow: var(--shadow-soft);
+      margin-top: 1rem;
     }
     p {
       margin: 1.5rem 0;
@@ -324,18 +330,23 @@ header {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 2rem;
-      img {
-        max-width: 100%;
-        filter: grayscale(1);
-        opacity: .8;
-        // transition: all 0 ease-in-out;
-        width: 55px;
-        &:hover{
-          opacity: 1;
-          filter: grayscale(0);
+      .mention {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          filter: grayscale(1);
+          opacity: .8;
+          // transition: all 0 ease-in-out;
+          width: 55px;
+          &:hover{
+            opacity: 1;
+            filter: grayscale(0);
+          }
         }
       }
-      }
+    }
     }
   }
 

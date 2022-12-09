@@ -182,6 +182,34 @@
         background-size: 300% 100%;
     }
     
+    .atf {
+        height: calc(100vh);
+        position: relative;
+        .scroll {
+          animation: scroll 3.1s infinite;
+          text-transform: uppercase;
+          color: grey;
+          font-weight: 300;
+          font-size: 1rem;
+          display: block!important;
+          position: absolute;
+          bottom: 4em;
+          left: 0;
+          right: 0;
+          text-align: center;
+        }
+        @keyframes scroll {
+          9.68% {
+            transform: translateY(-16px);
+            animation-timing-function: cubic-bezier(0.3,0.3,0.3,1);
+          } 
+          35.48% {
+            transform: translateY(0px);
+            animation-timing-function: cubic-bezier(0.3,0,0.3,1);
+          }
+        }
+      }
+    
     .section {
         padding: 7rem 3rem;
     }
