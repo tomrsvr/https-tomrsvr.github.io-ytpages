@@ -184,6 +184,7 @@
     
     .atf {
         height: calc(100vh);
+        height: -webkit-fill-available;
         min-height: -webkit-fill-available;
         position: relative;
         .scroll {
