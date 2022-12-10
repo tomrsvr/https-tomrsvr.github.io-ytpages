@@ -1500,7 +1500,7 @@ footer ul.sns {
     background-size: 300% 100%;
   }
   .atf {
-    height: calc(100vh);
+    height: calc(100vh - 5.5rem);
     min-height: -webkit-fill-available;
     position: relative;
   }
