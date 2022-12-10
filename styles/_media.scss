@@ -184,6 +184,7 @@
     
     .atf {
         height: calc(100vh);
+        min-height: -webkit-fill-available;
         position: relative;
         .scroll {
           animation: scroll 3.1s infinite;
@@ -196,7 +197,7 @@
           bottom: 4em;
           left: 0;
           right: 0;
-          text-align: center;
+          text-align: left;
         }
         @keyframes scroll {
           9.68% {
@@ -231,4 +232,7 @@
         }
     }
 
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    };
 }

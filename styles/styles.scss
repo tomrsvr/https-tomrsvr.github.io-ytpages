@@ -926,6 +926,7 @@ header {
 
 
 
+// post-tutorial, to organise
 
 
 .underline--magical {
@@ -976,6 +977,33 @@ header {
         }
       }
     }
+  }
+}
+
+
+footer {
+  display: grid;
+  background: var(--color-grey4);
+  color: var(--color-grey2);
+  min-height: 4rem;
+  // grid-template-areas: 
+  //   "footer-l footer-m footer-r";
+  //   .footer-l {
+  //     grid-area: footer-l;
+  //   }
+  //   .footer-m {
+  //     grid-area: footer-m;
+  //   }
+  //   .footer-r {
+  //     grid-area: footer-r;
+  //   }
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  justify-items: center;
+  ul.sns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
   }
 }
 
