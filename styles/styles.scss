@@ -998,8 +998,10 @@ footer {
   //     grid-area: footer-r;
   //   }
   grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 0.6rem;
   align-items: center;
   justify-items: center;
+  padding: 0.6rem 0.4rem;
   ul.sns {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

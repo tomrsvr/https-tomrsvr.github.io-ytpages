@@ -1299,10 +1299,12 @@ footer {
   min-height: 4rem;
   -ms-grid-columns: 1fr 3fr 1fr;
       grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 0.6rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
+  padding: 0.6rem 0.4rem;
 }
 
 footer ul.sns {
@@ -1505,8 +1507,6 @@ footer ul.sns {
     position: relative;
   }
   .atf .scroll {
-    -webkit-animation: scroll 3.1s infinite;
-            animation: scroll 3.1s infinite;
     text-transform: uppercase;
     color: grey;
     font-weight: 300;
@@ -1517,31 +1517,87 @@ footer ul.sns {
     left: 0;
     right: 0;
     text-align: left;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+  .atf .scroll:after {
+    content: "";
+    width: 3px;
+    height: 30px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    margin-left: 12px;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-animation: scroll1 2.75s ease-in-out infinite;
+            animation: scroll1 2.75s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @-webkit-keyframes scroll1 {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+    25% {
+      -webkit-transform: translateY(-0.6em);
+              transform: translateY(-0.6em);
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      opacity: 0;
+    }
+  }
+  @keyframes scroll1 {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+    25% {
+      -webkit-transform: translateY(-0.6em);
+              transform: translateY(-0.6em);
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      opacity: 0;
+    }
   }
   @-webkit-keyframes scroll {
     9.68% {
-      -webkit-transform: translateY(-16px);
-              transform: translateY(-16px);
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
       -webkit-animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 1);
               animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 1);
     }
-    35.48% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+    100% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
       -webkit-animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
               animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
     }
   }
   @keyframes scroll {
     9.68% {
-      -webkit-transform: translateY(-16px);
-              transform: translateY(-16px);
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
       -webkit-animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 1);
               animation-timing-function: cubic-bezier(0.3, 0.3, 0.3, 1);
     }
-    35.48% {
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
+    100% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
       -webkit-animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
               animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
     }
@@ -1565,8 +1621,8 @@ footer ul.sns {
     width: 100%;
   }
   footer {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 /*# sourceMappingURL=styles.css.map */

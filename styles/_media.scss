@@ -187,7 +187,7 @@
         min-height: -webkit-fill-available;
         position: relative;
         .scroll {
-          animation: scroll 3.1s infinite;
+        //   animation: scroll 3.1s infinite;
           text-transform: uppercase;
           color: grey;
           font-weight: 300;
@@ -198,14 +198,51 @@
           left: 0;
           right: 0;
           text-align: left;
+          transform-origin: top;
+          &:after {
+            content: "";
+            width: 3px;
+            height: 30px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            margin-left: 12px;
+            ;
+            transform-origin: top;
+            // animation: 3s ease 1.5s normal infinite scroll1;
+            animation: scroll1 2.75s ease-in-out infinite;
+            pointer-events: none;
+          }
         }
+        
+        @keyframes scroll1 {
+            0%   { transform: translateY(0);transform: scaleY(1); }
+            25%  { transform: translateY(-0.6em);transform: scaleY(0); opacity: (0); }
+            // 50%  { transform: translateY(0); }
+            // 75%  { transform: translateY(0.6em); }
+            // 100% { transform: translateY(0); }
+        }
+
         @keyframes scroll {
           9.68% {
-            transform: translateY(-16px);
+            // transform: translateY(-16px);
+            // opacity: 1;
+            transform: scaleY(1);
+            transform: translateY(0);
             animation-timing-function: cubic-bezier(0.3,0.3,0.3,1);
           } 
-          35.48% {
-            transform: translateY(0px);
+        //   35.48% {
+        //     // transform: translateY(0px);
+        //     // opacity: 0;
+        //     animation-timing-function: cubic-bezier(0.3,0,0.3,1);
+        //   }
+          100% {
+            // transform: translateY(0px);
+            // opacity: 0;
+            transform: scaleY(0);
+            transform: translateY(30px);
             animation-timing-function: cubic-bezier(0.3,0,0.3,1);
           }
         }
@@ -233,6 +270,10 @@
     }
 
     footer {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     };
+}
+
+@media (prefers-reduced-motion) {
+ // to do
 }
