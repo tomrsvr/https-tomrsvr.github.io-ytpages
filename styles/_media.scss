@@ -257,6 +257,11 @@
         }
     }
 
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
     .header-content .right-header .media {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -274,10 +279,10 @@
         align-self: center;
         .main {
             font-size: 1rem;
+            // margin: 0;
         }
         .contact {
             font-size: .8rem;
-            margin: 0 2rem;
             padding-top: 1rem;
         }    
 
