@@ -270,7 +270,25 @@
     }
 
     footer {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 2fr 1fr;
+        align-self: center;
+        .main {
+            font-size: 1rem;
+        }
+        .contact {
+            font-size: .8rem;
+            margin: 0 2rem;
+            padding-top: 1rem;
+        }    
+
+    ul.list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)!important;
+        grid-gap: 0;
+        li {
+            padding: 10px 15px;
+        }
+        }
     };
 }
 
